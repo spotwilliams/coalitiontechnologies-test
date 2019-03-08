@@ -17,4 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'TestController@index')->name('home');
+
+Route::post('/test/save', 'TestController@save')->name('test.save');
+Route::get('/test/inform', 'TestController@inform')->name('test.inform');
